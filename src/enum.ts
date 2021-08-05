@@ -10,7 +10,7 @@ enum Role {
   Maintainer = 5,
   Owner,
 }
-console.log(Role[0], Role.Owner) // Reporter 3
+console.log(Role[0], Role.Owner); // Reporter 3
 // 数字枚举编译后 使用反向映射
 // var Role;
 // (function (Role) {
@@ -45,5 +45,5 @@ const enum Month {
   Mar,
 }
 // 在编译阶段被移除 编译后没有任何代码
-const month = [Month.Jan, Month.Feb, Month.Mar, 666]
+const month = [Month.Jan, Month.Feb, Month.Mar, 666];
 // var month = [0 /* Jan */, 1 /* Feb */, 2 /* Mar */, 666];
