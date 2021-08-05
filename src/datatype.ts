@@ -21,7 +21,7 @@ tuple.push(999);
 // 函数类型
 let fn = (x: number, y: number): string => String(x + y + 190);
 let compute: (x: number, y: boolean) => number; // 这是一个函数类型
-compute = (arg1, arg2) => 1 + 1; // 这是具体的函数实现
+compute = (arg1, arg2) => arg1 + Number(arg2); // 这是具体的函数实现
 console.log(compute(2, false)); // 函数调用
 
 // 对象类型
