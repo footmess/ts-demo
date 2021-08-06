@@ -5,6 +5,7 @@ import "./objInterface";
 import "./fnInterface";
 import "./function";
 import "./class";
+import "./class-interface";
 
 let hello: string = "hello world";
 document.querySelectorAll(".app")[0].innerHTML = hello;
