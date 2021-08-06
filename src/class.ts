@@ -52,3 +52,60 @@ Husky.m(); // 输出Husky 这里super.show()相当于Dog.show.call(this)  方法
 // 构造函数的参数也可以添加修饰符  这样的作用就是可以直接声明为实例属性，可以省略在类中的定义
 // readonly 只读属性
 // static 静态成员  只能通过类名来调用，可以被继承，不能通过实例访问
+
+// 抽象类
+// 抽象类不能被实例化，只能被继承
+// 抽象类可以实现多态 在父类中定义一个抽象方法然后在不同的子类中实现
+abstract class Animal {
+  eat() {
+    console.log("eat");
+  }
+  // 定义一个抽象成员 abstract只能出现在抽象类中
+  abstract age: number;
+  abstract sleep(): void;
+}
+// let animal = new Animal()  报错
+
+class Cat extends Animal {
+  constructor(public name: string) {
+    super();
+    this.name = name;
+  }
+  readonly age: number = 18;
+  miao(): string {
+    console.log("miao");
+    return "a";
+  }
+  sleep() {
+    console.log("cat sleep; return void");
+  }
+}
+
+class Fish extends Animal {
+  age: 18;
+  sleep() {
+    console.log("fish sleep;return void");
+  }
+}
+let cat: Cat = new Cat("tom");
+let fish = new Fish();
+let animals: Animal[] = [cat, fish];
+animals.forEach((i) => {
+  i.sleep();
+});
+
+// this类型
+// 在成员方法中返回this，可以实现链式调用
+class WorkFlow {
+  step1() {
+    return this;
+  }
+  step2() {
+    return this;
+  }
+}
+class MyFlow extends WorkFlow {
+  next() {
+    return this;
+  }
+}
