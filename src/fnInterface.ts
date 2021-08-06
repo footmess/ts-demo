@@ -10,7 +10,7 @@ interface Add1 {
   //   (x: number, y: boolean): number;
   (z: number): string;
 }
-let myadd: Add1 = (z: number) => "2" + z;
+let myadd: Add1 = (z) => "2" + z;
 console.log(myadd(4));
 
 // 此外还可以使用类型别名type来定义函数
@@ -33,5 +33,5 @@ function getLib() {
 }
 let lib1 = getLib();
 let lib2 = getLib();
-lib1()
+lib1();
 lib1.showVersion();
