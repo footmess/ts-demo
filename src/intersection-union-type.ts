@@ -38,7 +38,7 @@ function getPet(master: Master) {
   return pet;
 }
 
-// 可区分的联合类型
+// 可辨识的联合类型
 interface Square {
   kind: "square";
   size: number;
