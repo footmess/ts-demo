@@ -55,7 +55,7 @@ interface StringArray {
 let chars: StringArray = ["f", "o", "o"];
 
 interface Names {
-  [str: string]: any; // 这里表示用任意的字符串索引Names都会得到string值
+  [str: string]: string; // 这里表示用任意的字符串索引Names都会得到string值
   y: null;
   [index: number]: string;
 }
